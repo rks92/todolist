@@ -11,12 +11,7 @@ default: &default
 
 development:
   <<: *default
-  adapter: postgresql
-  host: ec2-54-172-173-58.compute-1.amazonaws.com
-  database: detk51ga2ea08s
-  user: gvzmquyiqwpcwz
-  port: 5432
-  password: 15962541c0f27d8fc1ebaeb3f641c6df0c241681e223011038e37c9e438a644b
+  
   # database: db/development.sqlite3
 
 # Warning: The database defined as "test" will be erased and
