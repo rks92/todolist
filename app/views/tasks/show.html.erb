@@ -1,0 +1,37 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @task.name %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @task.description %>
+</p>
+
+<p>
+  <strong>Completed:</strong>
+  <%= @task.completed %>
+</p>
+
+<% if @task.parent.present? %>
+  <p>
+    <strong>Parent:</strong>
+    <%= link_to @task.parent.name, @task.parent %>
+  </p>
+<% end %>
+
+<% if @task.children.count > 0 %>
+<p>
+  <strong>Children:</strong>
+  <ul>
+  <% @task.children.each do |task| %>
+    <li> <%= link_to task.name, task %> </li>
+    <br>
+  <% end %>
+  </ul>
+<% end %>
+
+<%= link_to 'Edit', edit_task_path(@task) %> |
+<%= link_to 'Back', tasks_path %>
