@@ -1,26 +1,22 @@
-# README
+# Todo List App
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Hosted Here: https://todolist-one.herokuapp.com/tasks
 
-Things you may want to cover:
+Simple scaffolded todolist application
 
-* Ruby version
+Generator Commands Used:
 
-* System dependencies
+`rails new todolist-app`
+`rails generate scaffold task name:string description:string completed:boolean parent:references`
 
-* Configuration
+Uses Ruby Version 2.6.4p104
+Hosted using heroku
+A seed script is included using the faker gem
 
-* Database creation
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-=======
-# todolist
+The user can:
+- CRUD tasks
+- View tasks that haven't been completed yet
+- View completed tasks
+- Edit tasks to mark them as completed
+- Browse Parent & Children tasks from their current task
